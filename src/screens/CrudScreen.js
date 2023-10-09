@@ -67,8 +67,8 @@ const CrudScreen = () => {
           return (
             <div>
               {" "}
-              <h1>Name: {user.name}</h1>
-              <h1>Name: {user.age}</h1>
+              <Text>Name: {user.name}</Text>
+              <Text>Name: {user.age}</Text>
               <TouchableOpacity onPress={updateUser(user.id, user.age)}>Increase Age</TouchableOpacity>
               <TouchableOpacity onPress={deleteUser(user.id)}>Delete User</TouchableOpacity>
             </div>
