@@ -51,7 +51,7 @@ const LoginScreen = () => {
         password
       )
       console.log(user)
-      navigation.replace("Home");
+      navigation.replace("Crud");
      } catch (error) {
       console.log(error.message)
      }
@@ -71,7 +71,7 @@ const LoginScreen = () => {
       console.log(`Response from mongodb: ${response}`);
       const token = response.data.token;
       AsyncStorage.setItem("authToken", token);
-      navigation.replace("Home"); 
+      ("Home"); 
     })
     .catch((error) => {
       Alert.alert("Login Error", "Invalid Email");
