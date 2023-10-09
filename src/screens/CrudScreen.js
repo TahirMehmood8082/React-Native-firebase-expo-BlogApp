@@ -1,13 +1,7 @@
 import {
-  StyleSheet,
   Text,
   View,
-  SafeAreaView,
- // Platform,
-  ScrollView,
-  Pressable,
   TextInput,
-  Image,
   StatusBar,
   TouchableOpacity
 } from "react-native";
@@ -65,13 +59,13 @@ const CrudScreen = () => {
         <TouchableOpacity onPress={createUser}>Create User</TouchableOpacity>
         {users.map((user)=>{
           return (
-            <div>
+            <View>
               {" "}
               <Text>Name: {user.name}</Text>
               <Text>Name: {user.age}</Text>
               <TouchableOpacity onPress={updateUser(user.id, user.age)}>Increase Age</TouchableOpacity>
               <TouchableOpacity onPress={deleteUser(user.id)}>Delete User</TouchableOpacity>
-            </div>
+            </View>
           )
         })}
         
