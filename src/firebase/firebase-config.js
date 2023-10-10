@@ -1,19 +1,19 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
-import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getFirestore } from '@firebase/firestore'
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: 'AIzaSyD_Y2riBEfbU_-QHOsSR_UAh4eEyHF_bwo',
-  authDomain: 'project-id.firebaseapp.com',
-  databaseURL: 'https://project-id.firebaseio.com',
-  projectId: 'project-id',
-  storageBucket: 'project-id.appspot.com',
-  messagingSenderId: 'sender-id',
-  appId: 'app-id',
-  measurementId: 'G-measurement-id',
+  apiKey: "AIzaSyAkMgiCfIvu36xLFkdxGLxrSgOdYLqwVRE",
+  authDomain: "blogapp-61b1d.firebaseapp.com",
+  databaseURL: "https://blogapp-61b1d-default-rtdb.firebaseio.com",
+  projectId: "blogapp-61b1d",
+  storageBucket: "blogapp-61b1d.appspot.com",
+  messagingSenderId: "172890131950",
+  appId: "1:172890131950:web:62a40467d72191bebd12ff",
+  measurementId: "G-ZJ2GSE0WKF"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -21,7 +21,7 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app)
 
 const auth = initializeAuth(app, {
-  persistence: getReactNativePersistence(ReactNativeAsyncStorage),
+  persistence: getReactNativePersistence(AsyncStorage),
 });
 
 export { auth };
