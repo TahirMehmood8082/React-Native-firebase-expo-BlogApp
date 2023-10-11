@@ -33,15 +33,15 @@ const LoginScreen = () => {
     const checkLoginStatus = async () => {
       try {
         const token = await AsyncStorage.getItem("authToken");
-
+        console.log(`auth in checkLoginStatus: ${token}`)
         if (token) {
-          navigation.replace("Home");
+          navigation.replace("Crud");
         }
       } catch (err) {
         console.log("error message", err);
       }
     };
-   // checkLoginStatus();
+   checkLoginStatus();
   }, []);
   const handleLogin = async () =>{
     try {
@@ -51,6 +51,8 @@ const LoginScreen = () => {
         password
       )
       console.log(user)
+      console.log(`auth pass by handleLogin : ${password}`)
+      AsyncStorage.setItem("authToken", password);
       navigation.replace("Crud");
      } catch (error) {
       console.log(error.message)

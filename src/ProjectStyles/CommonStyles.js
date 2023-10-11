@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     borderColor: "#D0D0D0",
     borderWidth: 2,
     marginTop: 15,
+    marginBottom: 15,
   },
   spaceBetweenLeftRightItems: {
     padding: 20,
