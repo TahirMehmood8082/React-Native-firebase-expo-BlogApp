@@ -3,17 +3,28 @@ import { getAuth } from 'firebase/auth';
 import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getFirestore } from '@firebase/firestore'
+import {
+  REACT_APP_API_KEY,
+  REACT_APP_AUTH_DOMAIN,
+  REACT_APP_DATABASE_URL,
+  REACT_APP_PROJECT_ID,
+  REACT_APP_STORAGE_BUCKET,
+  REACT_APP_MESSAGING_SENDER_ID,
+  REACT_APP_APP_ID,
+  REACT_APP_MEASUREMENT_ID,
+} from "@env"
+
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyAkMgiCfIvu36xLFkdxGLxrSgOdYLqwVRE",
-  authDomain: "blogapp-61b1d.firebaseapp.com",
-  databaseURL: "https://blogapp-61b1d-default-rtdb.firebaseio.com",
-  projectId: "blogapp-61b1d",
-  storageBucket: "blogapp-61b1d.appspot.com",
-  messagingSenderId: "172890131950",
-  appId: "1:172890131950:web:62a40467d72191bebd12ff",
-  measurementId: "G-ZJ2GSE0WKF"
+  apiKey: REACT_APP_API_KEY,
+  authDomain: REACT_APP_AUTH_DOMAIN,
+  databaseURL: REACT_APP_DATABASE_URL,
+  projectId: REACT_APP_PROJECT_ID,
+  storageBucket: REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: REACT_APP_MESSAGING_SENDER_ID,
+  appId: REACT_APP_APP_ID,
+  measurementId: REACT_APP_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
