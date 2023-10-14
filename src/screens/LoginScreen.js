@@ -35,7 +35,7 @@ const LoginScreen = () => {
         const token = await AsyncStorage.getItem("authToken");
         console.log(`auth in checkLoginStatus: ${token}`)
         if (token) {
-          navigation.replace("Crud");
+          navigation.replace("Posts");
         }
       } catch (err) {
         console.log("error message", err);
@@ -53,7 +53,7 @@ const LoginScreen = () => {
       console.log(user)
       console.log(`auth pass by handleLogin : ${password}`)
       AsyncStorage.setItem("authToken", password);
-      navigation.replace("Crud");
+      navigation.replace("Posts");
      } catch (error) {
       console.log(error.message)
      }
